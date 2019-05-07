@@ -3,6 +3,10 @@ import React from "react";
 import SearchBar from "./Components/Search-Bar";
 import TrackList from "./Components/Track-List";
 import TrackListItem from "./Components/Track-List-Item";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faEnvelope, faKey);
 
 class App extends React.Component {
   state = {
