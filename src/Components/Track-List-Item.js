@@ -9,8 +9,14 @@ const TrackListItem = props => {
     currency,
     trackId,
     artworkUrl100,
-    primaryGenreName
+    primaryGenreName,
+    previewUrl
   } = props.trackInfo;
+
+  let onPlay = () => {
+    const track = `${trackId}-audio`;
+    console.log(`Playing ${track}`)
+  }
 
   return (
     <div className={primaryGenreName + "-genre single-item col-12 col-sm-4 col-md-3 col-lg-2 shadow m-2 pb-2 pt-2 d-flex flex-column justify-content-between"}>
@@ -42,8 +48,9 @@ const TrackListItem = props => {
         </div>
 
         <div className="text-center">
-          <i className="fas fa-play bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
-          <i className="fas fa-pause bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
+          <i onClick={onPlay} className="fas fa-play play-button bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
+          <i className="fas fa-pause pause-button bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
+          <audio id={trackId + "-audio"} src={previewUrl}></audio>
         </div>
       </div>
     </div>
