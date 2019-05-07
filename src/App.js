@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="title-bar">
-          <h1><i class="fas fa-headphones-alt"></i>
+          <h1 className="h5"><i class="fas fa-headphones-alt"></i>
             The sound of
             <div className="search-field">
               <SearchBar
