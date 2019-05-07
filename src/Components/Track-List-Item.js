@@ -22,8 +22,8 @@ const TrackListItem = props => {
         <p>{collectionName}</p>
       </div>
       <div>
-        {trackPrice == -1 ? "Only album" : trackPrice}
-        {currency == "USD" ? (trackPrice == -1 ? "" : "$") : "€"}
+        {trackPrice === -1 ? "Only album" : trackPrice}
+        {currency === "USD" ? (trackPrice === -1 ? "" : "$") : "€"}
       </div>
       <div>
         <i className="fas fa-play" id={trackId} />

@@ -2,17 +2,16 @@ import React from "react";
 
 import SearchBar from "./Components/Search-Bar";
 import TrackList from "./Components/Track-List";
-import TrackListItem from "./Components/Track-List-Item";
 
 class App extends React.Component {
   state = {
     tracks: null,
-    searchTerm: ""
+    searchTerm: "Silence"
   };
 
   onSearchInputChange = e => {
     e.persist();
-    const searchTerm = e.target.value;
+    const searchTerm = 'Silence' //e.target.value;
     this.setState({ searchTerm }, () => {
       if (searchTerm.length > 2) {
         this.searchForMusic();
@@ -32,10 +31,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <SearchBar
-            onSearchInputChangeHandler={this.onSearchInputChange}
-            searchTerm={searchTerm}
-          />
+          <div className="search-field">
+            <SearchBar
+              onSearchInputChangeHandler={this.onSearchInputChange}
+              searchTerm={searchTerm}
+            />
+          </div>
         </header>
         <main>
           {tracks ? (
@@ -44,7 +45,7 @@ class App extends React.Component {
               <TrackList tracks={tracks} />
             </React.Fragment>
           ) : (
-              <div className="search-field">Search to find music</div>
+              <div className="search-to-find">Search to find music</div>
             )}
 
         </main>
