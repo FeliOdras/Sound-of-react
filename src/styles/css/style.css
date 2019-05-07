@@ -7030,3 +7030,8 @@ a.text-dark:hover, a.text-dark:focus {
   background: #fff; }
   .title-bar .search-field {
     display: inline-block; }
+
+.tracklist {
+  font-size: .8rem; }
+  .tracklist .label {
+    font-size: .7rem; }

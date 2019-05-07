@@ -43,14 +43,10 @@ class App extends React.Component {
         </header>
         <main className="mt-5">
           {tracks ? (
-            <React.Fragment>
-              <h1 className="app-title">The sound of {searchTerm}</h1>
-              <TrackList tracks={tracks} />
-            </React.Fragment>
+            <TrackList tracks={tracks} />
           ) : (
               <div className="search-to-find">Search to find music</div>
             )}
-
         </main>
       </div>
     );

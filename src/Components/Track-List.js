@@ -6,7 +6,7 @@ const TrackList = props => {
   const { tracks } = props;
   console.log(tracks);
   return (
-    <div className="tracklist">
+    <div className="tracklist row">
       {tracks.map((trackInfo, index) => (
         <TrackListItem trackInfo={trackInfo} key={index} />
       ))}

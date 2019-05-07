@@ -8,30 +8,38 @@ const TrackListItem = props => {
     trackPrice,
     currency,
     trackId,
-    artworkUrl100
+    artworkUrl100,
+    primaryGenreName
   } = props.trackInfo;
 
   return (
-    <div className="single-item">
-      <div>
+    <div className="single-item col-md-3">
+      <div className="text-center">
         <img src={artworkUrl100} alt={trackName + "- Cover"} />
       </div>
-      <div>
-        <div className="label">Track Name</div>
-        {trackName}</div>
-      <div>
-        <div className="label">Artist Name</div>
-        {artistName}</div>
-      <div>
-        <div className="label">Collection Name</div>
-        <p>{collectionName}</p>
+      <div className="row">
+        <div className="col-6">
+          <div className="label">Track Name</div>
+          {trackName}
+        </div>
+        <div className="col-6">
+          <div className="label">Genre</div>
+          {primaryGenreName}
+        </div>
+        <div className="col-6">
+          <div className="label">Artist Name</div>
+          {artistName}</div>
+        <div className="col-6">
+          <div className="label">Collection Name</div>
+          <p>{collectionName}</p>
+        </div>
       </div>
-      <div>
-        <div className="label">Price</div>
+      <div className="text-center single-item-price">
         {trackPrice === -1 ? "Only album" : trackPrice}
         {currency === "USD" ? (trackPrice === -1 ? "" : "$") : "€"}
       </div>
-      <div>
+
+      <div className="text-center">
         <i className="fas fa-play" id={trackId} />
         <i className="fas fa-pause" id={trackId} />
       </div>
