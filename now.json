@@ -12,23 +12,23 @@
   ],
   "routes": [
     {
-      "src": "/public/static/(.*)",
+      "src": "/static/(.*)",
       "headers": {
         "cache-control": "s-maxage=31536000,immutable"
       },
-      "dest": "/public/static/$1"
+      "dest": "/static/$1"
     },
     {
-      "src": "/public/favicon.ico",
-      "dest": "/public/favicon.ico"
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
     },
     {
       "src": "/asset-manifest.json",
       "dest": "/asset-manifest.json"
     },
     {
-      "src": "/public/manifest.json",
-      "dest": "/public/manifest.json"
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
     },
     {
       "src": "/precache-manifest.(.*)",
