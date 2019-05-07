@@ -6,12 +6,12 @@ import TrackList from "./Components/Track-List";
 class App extends React.Component {
   state = {
     tracks: null,
-    searchTerm: "Silence"
+    searchTerm: ""
   };
 
   onSearchInputChange = e => {
     e.persist();
-    const searchTerm = 'Silence' //e.target.value;
+    const searchTerm = e.target.value;
     this.setState({ searchTerm }, () => {
       if (searchTerm.length > 2) {
         this.searchForMusic();
@@ -30,13 +30,16 @@ class App extends React.Component {
     const { tracks, searchTerm } = this.state;
     return (
       <div className="App">
-        <header>
-          <div className="search-field">
-            <SearchBar
-              onSearchInputChangeHandler={this.onSearchInputChange}
-              searchTerm={searchTerm}
-            />
-          </div>
+        <header className="title-bar">
+          <h1><i class="fas fa-headphones-alt"></i>
+            The sound of
+            <div className="search-field">
+              <SearchBar
+                onSearchInputChangeHandler={this.onSearchInputChange}
+                searchTerm={searchTerm}
+              />
+            </div>
+          </h1>
         </header>
         <main>
           {tracks ? (
