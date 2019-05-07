@@ -4,7 +4,6 @@ import TrackListItem from "./Track-List-Item";
 
 const TrackList = props => {
   const { tracks } = props;
-  console.log(tracks);
   return (
     <div className="tracklist d-flex justify-content-around flex-wrap">
       {tracks.map((trackInfo, index) => (

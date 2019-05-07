@@ -13,24 +13,25 @@ const TrackListItem = props => {
   } = props.trackInfo;
 
   return (
-    <div className="single-item col-md-3 col-lg-2 shadow m-2 pb-2 d-flex flex-column justify-content-between">
+    <div className={primaryGenreName + "-genre single-item col-12 col-sm-4 col-md-3 col-lg-2 shadow m-2 pb-2 pt-2 d-flex flex-column justify-content-between"}>
       <div className="text-center">
         <img src={artworkUrl100} alt={trackName + "- Cover"} className="img-thumbnail" />
       </div>
       <div className="row">
-        <div className="col-6">
-          <div className="label">Track Name</div>
+        <div className="label col-4">Track</div>
+        <div className="col-8">
           {trackName}
         </div>
-        <div className="col-6">
-          <div className="label">Genre</div>
+        <div className="label col-4">Artist</div>
+        <div className="col-8">
+          {artistName}
+        </div>
+        <div className="label col-4">Genre</div>
+        <div className="col-8">
           {primaryGenreName}
         </div>
-        <div className="col-6">
-          <div className="label">Artist Name</div>
-          {artistName}</div>
-        <div className="col-6">
-          <div className="label">Collection Name</div>
+        <div className="label col-4">Collection</div>
+        <div className="col-8">
           <p>{collectionName}</p>
         </div>
       </div>

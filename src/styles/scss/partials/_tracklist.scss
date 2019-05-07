@@ -1,7 +1,11 @@
 .tracklist {
     font-size:.8rem;
 
-    .label {
-        font-size: .7rem;
+    .single-item {
+        background-color:rgba(255,255,255,.7);
+
+        .label {
+            font-size: .7rem;
+        }
     }
 }
