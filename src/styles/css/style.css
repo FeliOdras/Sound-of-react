@@ -7027,7 +7027,8 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   width: 100vw;
   height: 40px;
-  background: #fff; }
+  background: #fff;
+  z-index: 3000; }
   .title-bar .search-field {
     display: inline-block; }
 

@@ -6,7 +6,7 @@ const TrackList = props => {
   const { tracks } = props;
   console.log(tracks);
   return (
-    <div className="tracklist row">
+    <div className="tracklist d-flex justify-content-around flex-wrap">
       {tracks.map((trackInfo, index) => (
         <TrackListItem trackInfo={trackInfo} key={index} />
       ))}
