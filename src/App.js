@@ -31,15 +31,23 @@ class App extends React.Component {
     const { tracks, searchTerm } = this.state;
     return (
       <div className="App">
-        <SearchBar
-          onSearchInputChangeHandler={this.onSearchInputChange}
-          searchTerm={searchTerm}
-        />
-        {tracks ? (
-          <TrackList tracks={tracks} />
-        ) : (
-          <div>Search to find music</div>
-        )}
+        <header>
+          <SearchBar
+            onSearchInputChangeHandler={this.onSearchInputChange}
+            searchTerm={searchTerm}
+          />
+        </header>
+        <main>
+          {tracks ? (
+            <React.Fragment>
+              <h1 className="app-title">The sound of {searchTerm}</h1>
+              <TrackList tracks={tracks} />
+            </React.Fragment>
+          ) : (
+              <div className="search-field">Search to find music</div>
+            )}
+
+        </main>
       </div>
     );
   }
