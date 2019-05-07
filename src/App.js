@@ -29,9 +29,9 @@ class App extends React.Component {
   render() {
     const { tracks, searchTerm } = this.state;
     return (
-      <div className="App">
-        <header className="title-bar pl-3 pr-3">
-          <h1 className="h5 text-center"><i className="fas fa-headphones-alt mr-2"></i>
+      <div className="App font-josefin">
+        <header className="title-bar pl-3 pr-3 pt-1 pb-1">
+          <h1 className="h4 text-center font-josefin"><i className="fas fa-headphones-alt mr-2"></i>
             The sound of
             <div className="search-field">
               <SearchBar
