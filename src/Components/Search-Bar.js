@@ -6,7 +6,7 @@ const SearchBar = props => {
       className="border-0 ml-1"
       value={props.searchTerm}
       onChange={props.onSearchInputChangeHandler}
-      placeholder="Search to find music"
+      placeholder="Enter your search term"
     />
   );
 };
