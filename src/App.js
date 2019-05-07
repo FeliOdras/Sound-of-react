@@ -45,7 +45,11 @@ class App extends React.Component {
           {tracks ? (
             <TrackList tracks={tracks} />
           ) : (
-              <div className="search-to-find">Search to find music</div>
+              <div className="text-center mt-5 pt-2">
+                <div className="search-to-find m-auto p-3 bg-light d-inline-block mt-5 h4 shadow rounded">
+                  <i className="fas fa-arrow-circle-up d-block mb-3"></i>
+                  Search to find music</div>
+              </div>
             )}
         </main>
       </div>
