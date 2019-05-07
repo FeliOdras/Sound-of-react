@@ -21,7 +21,7 @@ class App extends React.Component {
 
   searchForMusic = (searchTerm = this.state.searchTerm) => {
     console.log("Searching ", searchTerm);
-    fetch(`https://dci-fbw12-search-itunes.now.sh/?term=${searchTerm}`)
+    fetch(`https://dci-fbw12-search-itunes.now.sh/?term=${searchTerm}&media=music`)
       .then(response => response.json())
       .then(data => this.setState({ tracks: data.results }));
   };

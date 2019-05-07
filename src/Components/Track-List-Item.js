@@ -12,7 +12,7 @@ const TrackListItem = props => {
   } = props.trackInfo;
 
   return (
-    <div className="row">
+    <div className="single-item">
       <div>
         <img src={artworkUrl100} alt={trackName + "- Cover"} />
       </div>
