@@ -36,7 +36,7 @@ const TrackListItem = props => {
         </div>
       </div>
       <div className="bottom-elements">
-        <div className="text-center single-item-price">
+        <div className="text-center single-item-price bg-success font-weight-bold text-light p-2 m-2">
           {trackPrice === -1 ? "Only album" : trackPrice}
           {currency === "USD" ? (trackPrice === -1 ? "" : "$") : "€"}
         </div>
