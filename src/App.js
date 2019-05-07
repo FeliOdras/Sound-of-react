@@ -41,7 +41,7 @@ class App extends React.Component {
             </div>
           </h1>
         </header>
-        <main>
+        <main className="mt-5">
           {tracks ? (
             <React.Fragment>
               <h1 className="app-title">The sound of {searchTerm}</h1>

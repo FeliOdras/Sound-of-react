@@ -16,12 +16,18 @@ const TrackListItem = props => {
       <div>
         <img src={artworkUrl100} alt={trackName + "- Cover"} />
       </div>
-      <div>{trackName}</div>
-      <div>{artistName}</div>
       <div>
+        <div className="label">Track Name</div>
+        {trackName}</div>
+      <div>
+        <div className="label">Artist Name</div>
+        {artistName}</div>
+      <div>
+        <div className="label">Collection Name</div>
         <p>{collectionName}</p>
       </div>
       <div>
+        <div className="label">Price</div>
         {trackPrice === -1 ? "Only album" : trackPrice}
         {currency === "USD" ? (trackPrice === -1 ? "" : "$") : "€"}
       </div>
