@@ -36,14 +36,14 @@ const TrackListItem = props => {
         </div>
       </div>
       <div className="bottom-elements">
-        <div className="text-center single-item-price bg-success font-weight-bold text-light p-2 m-2">
+        <div className="text-center single-item-price bg-dark font-weight-bold text-light p-2 m-2">
           {trackPrice === -1 ? "Only album" : trackPrice}
           {currency === "USD" ? (trackPrice === -1 ? "" : "$") : "€"}
         </div>
 
         <div className="text-center">
-          <i className="fas fa-play" id={trackId} />
-          <i className="fas fa-pause" id={trackId} />
+          <i className="fas fa-play bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
+          <i className="fas fa-pause bg-dark text-light rounded-circle p-2 m-1" id={trackId} />
         </div>
       </div>
     </div>
