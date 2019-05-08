@@ -6,7 +6,7 @@ import TrackList from "./Components/Track-List";
 class App extends React.Component {
   state = {
     tracks: null,
-    searchTerm: ""
+    searchTerm: "Seeed"
   };
 
   onSearchInputChange = e => {
